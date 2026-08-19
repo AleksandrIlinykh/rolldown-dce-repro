@@ -1,0 +1,20 @@
+{
+  "name": "rolldown-dce-name-collision-repro",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs cases/01-broken-baseline dce-only",
+    "build:minify": "node build.mjs cases/01-broken-baseline true",
+    "build:nominify": "node build.mjs cases/01-broken-baseline false",
+    "build:packages": "node build.mjs cases/05-broken-notistack-and-jodit dce-only",
+    "check": "node check.mjs",
+    "cases": "node run-all.mjs"
+  },
+  "dependencies": {
+    "jodit": "4.13.3",
+    "notistack": "3.0.2"
+  },
+  "devDependencies": {
+    "rolldown": "1.2.5"
+  }
+}
